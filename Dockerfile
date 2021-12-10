@@ -12,7 +12,7 @@ RUN apt-get install updates && \
         python3-dev \
         python3-wheel \
         git \
-        openss 
+        openssl 
         
 # create working dir and setting the location to app
 WORKDIR /app
