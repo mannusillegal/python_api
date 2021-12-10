@@ -1,4 +1,6 @@
 From Ubuntu:18.04
+
+# use an offical python runtime as a parent image
 From Python:3.8
 
 # install pre-requisties
@@ -16,7 +18,9 @@ RUN apt-get install updates && \
 WORKDIR /app
 copy ./ /app/
 
+# Expose port 8000 available to world outside the container
+EXPOSE 8000
 
 # Run app.py while the container launches
-CMD["python"]
+CMD ["python", "fscript.py"]
 
